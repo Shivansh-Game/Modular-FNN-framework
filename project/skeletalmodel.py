@@ -45,6 +45,7 @@ def load_model(model_path):
         n_ip = data['n_inputs']
         x_op = data['n_outputs']
         h_config = data['hidden_layers']
+        loss = data['loss_type']
         
         # remake model
         model = SkeletalModel(
@@ -58,7 +59,7 @@ def load_model(model_path):
         
         print("Model loaded successfully.")
         model.eval()
-        return model
+        return model, loss
         
     except Exception as e:
         print(f"Error loading model: {e}")
