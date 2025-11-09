@@ -13,11 +13,11 @@ json_trainer(
     label_name="label",
     loss_type="mse"
 )
-model = load_model("model.pth")
+model, loss_type = load_model("model.pth") # returns a tuple of model, loss_type
 
 
 try:
-    test_data = JSONDataset("test.json", "features", "label", "mse")
+    test_data = JSONDataset("test.json", "features", "label", loss_type)
         
 except Exception as e:
     print(f"Error loading or processing test file: {e}")
