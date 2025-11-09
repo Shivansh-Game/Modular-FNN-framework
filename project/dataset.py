@@ -2,8 +2,6 @@ import torch
 import json
 from torch.utils.data import Dataset
 
-
-
 class JSONDataset(Dataset):
     def __init__(self, file_path, features_name, label_name, loss_type):
         with open(file_path, 'r') as f:
