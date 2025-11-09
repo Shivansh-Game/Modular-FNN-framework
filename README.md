@@ -15,7 +15,7 @@ Simple and reusable framework to train FNNs for numerical json data
   * Python 3
   * PyTorch
 
-## 📁 File Structure
+## File Structure
 
 ```
 .
